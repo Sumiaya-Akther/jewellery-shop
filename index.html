@@ -19,113 +19,84 @@
 <body>
 
     <header class="p-4 bg-gray-100 dark:bg-gray-100 dark:text-gray-800">
-        <div class="w-11/12 flex justify-between h-16 mx-auto">
-            <ul class="items-stretch hidden space-x-3 lg:flex">
-                <li class="flex">
-                    <a rel="noopener noreferrer" href="#"
-                        class="flex items-center px-4 -mb-1  dark:text-violet-600 dark:border-violet-600">HOME</a>
-                </li>
-                <li class="flex">
-                    <a rel="noopener noreferrer" href="#" class="flex items-center px-4 -mb-1 ">ABOUT</a>
-                </li>
-                <li class="flex">
-                    <a rel="noopener noreferrer" href="#" class="flex items-center px-4 -mb-1 ">SHOP</a>
-                </li>
-                <li class="flex">
-                    <a rel="noopener noreferrer" href="#" class="flex items-center px-4 -mb-1 ">PAGES</a>
-                </li>
-                <li class="flex">
-                    <a rel="noopener noreferrer" href="#" class="flex items-center px-4 -mb-1 ">BLOGS</a>
-                </li>
-            </ul>
-            <div class="flex items-center p-2">
-                <h1 class="text-3xl font-bold">Jewellery <Span class="text-violet-600">Shop</Span></h1>
-            </div>
+        <div class="w-11/12 flex justify-between items-center mx-auto h-16">
 
-            <div class="flex items-center md:space-x-4">
-                <ul class="items-stretch hidden space-x-3 lg:flex">
-                    <li class="flex">
-                        <a rel="noopener noreferrer" href="#"
-                            class="flex items-center px-4 -mb-1  dark:text-violet-600 dark:border-violet-600">FEATURED</a>
-                    </li>
-                    <li class="flex">
-                        <a rel="noopener noreferrer" href="#" class="flex items-center px-4 -mb-1 ">CONTACT</a>
-                    </li>
-                    <li class="flex">
-                        <a rel="noopener noreferrer" href="#" class="flex items-center px-4 -mb-1 "><i
-                                class="fa-solid fa-magnifying-glass"></i></a>
-                    </li>
-                    <li class="flex">
-                        <a rel="noopener noreferrer" href="#" class="flex items-center px-4 -mb-1 ">
-                            <i class="fa-solid fa-cart-shopping"></i></a>
-                    </li>
-                    <li class="flex">
-                        <a rel="noopener noreferrer" href="#" class="flex items-center px-4 -mb-1 "><i
-                                class="fa-solid fa-user"></i></a>
-                    </li>
-                </ul>
-            </div>
-            <button title="Open menu" type="button" class="p-4 lg:hidden">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                    class="w-6 h-6 dark:text-gray-800">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
-                    </path>
-                </svg>
+            <!-- Left Menu  -->
+            <ul class="items-stretch hidden space-x-3 text-gray-500 font-semibold lg:flex">
+                <li><a href="#" class="flex items-center px-4 -mb-1 hover:text-orange-600">HOME</a></li>
+                <li><a href="about.html" class="flex items-center px-4 -mb-1 hover:text-orange-600">ABOUT</a></li>
+                <li><a href="#" class="flex items-center px-4 -mb-1 hover:text-orange-600">SHOP</a></li>
+                <li><a href="#" class="flex items-center px-4 -mb-1 hover:text-orange-600">PAGES</a></li>
+                <li><a href="#" class="flex items-center px-4 -mb-1 hover:text-orange-600">BLOGS</a></li>
+            </ul>
+
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-2">
+                <img src="./assets/logo.png" alt="Jewellery Logo" class="h-10 w-10 object-cover" />
+                <h1 class="text-2xl md:text-3xl font-semibold">Jewelly</h1>
+            </a>
+
+            <!-- Right Menu -->
+            <ul class="items-stretch hidden space-x-3 text-gray-500 font-semibold  lg:flex">
+                <li><a href="#" class="flex items-center px-4 -mb-1 hover:text-orange-600">FEATURED</a></li>
+                <li><a href="#" class="flex items-center px-4 -mb-1 hover:text-orange-600">CONTACT</a></li>
+                <li><a href="#" class="flex items-center px-4 -mb-1"><i class="fa-solid fa-magnifying-glass"></i></a>
+                </li>
+                <li><a href="#" class="flex items-center px-4 -mb-1"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <li><a href="#" class="flex items-center px-4 -mb-1"><i class="fa-solid fa-user"></i></a></li>
+            </ul>
+
+            <!-- Hamburger -->
+            <button id="menu-toggle" class="p-4 lg:hidden">
+                <i class="fa-solid fa-bars"></i>
             </button>
+        </div>
+
+        <!-- Mobile Menu (hidden by default) -->
+        <div id="mobile-menu" class="hidden px-4 pt-2 pb-4 space-y-2">
+            <a href="#" class="block py-1">HOME</a>
+            <a href="about.html" class="block py-1">ABOUT</a>
+            <a href="#" class="block py-1">SHOP</a>
+            <a href="#" class="block py-1">PAGES</a>
+            <a href="#" class="block py-1">BLOGS</a>
+            <a href="#" class="block py-1">FEATURED</a>
+            <a href="#" class="block py-1">CONTACT</a>
+            <a href="#" class="block py-1"><i class="fa-solid fa-magnifying-glass mr-2"></i>Search</a>
+            <a href="#" class="block py-1"><i class="fa-solid fa-cart-shopping mr-2"></i>Cart</a>
+            <a href="#" class="block py-1"><i class="fa-solid fa-user mr-2"></i>Account</a>
         </div>
     </header>
     <Main>
         <!-- banner -->
-        <div>
-            <div class="carousel w-full">
-                <div id="slide1" class="carousel-item relative w-full h-[500px]">
-                    <img src="./assets/banner1.jpg" class="w-full" />
-                    <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-                        <a href="#slide4" class="btn btn-circle">❮</a>
-                        <a href="#slide2" class="btn btn-circle">❯</a>
-                    </div>
-                </div>
-                <div id="slide2" class="carousel-item relative w-full h-[500px]">
-                    <img src="./assets/banner2.jpg" class="w-full" />
-                    <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-                        <a href="#slide1" class="btn btn-circle">❮</a>
-                        <a href="#slide3" class="btn btn-circle">❯</a>
-                    </div>
-                </div>
-                <div id="slide3" class="carousel-item relative w-full h-[500px]">
-                    <img src="./assets/banner3 (2).jpg" class="w-full" />
-                    <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-                        <a href="#slide2" class="btn btn-circle">❮</a>
-                        <a href="#slide4" class="btn btn-circle">❯</a>
-                    </div>
-                </div>
-                <div id="slide4" class="carousel-item relative w-full h-[500px]">
-                    <img src="./assets/banner2.jpg" class="w-full" />
-                    <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-                        <a href="#slide3" class="btn btn-circle">❮</a>
-                        <a href="#slide1" class="btn btn-circle">❯</a>
-                    </div>
+        <div class="flex flex-col md:flex-row">
+            <div class="bg-[#f3efec] flex-1 flex justify-center flex-col ">
+                <div class="p-10  md:pl-30">
+                    <p class="text-orange-500 text-xl font-semibold">Save Upto 50%!</p>
+                    <h1 class="lg:text-5xl md:text-4xl text-3xl font-bold tracking-wide ... mb-8 mt-4">
+                        Happiness Comes <br>In The Box Of <br>Jewellery
+                    </h1>
+                    <button class="btn px-8 py-5 btn-outline ">Explore</button>
                 </div>
             </div>
+            <div class="flex-1">
+                <img class="w-full h-[400px] md:h-[550px]" src="./assets/model.png" alt="">
+            </div>
         </div>
-        <div class="w-11/12 mx-auto my-18 flex justify-center gap-8 flex-col md:flex-row">
+
+        <div class="w-10/12 mx-auto my-18 flex justify-center gap-8 flex-col md:flex-row">
             <div class="relative">
-                <div>
-                    <img class="w-96 md:w-[700px]" src="./assets/diamonds.jpg" alt="">
-                </div>
+                <img class="w-96 md:w-[700px]" src="./assets/diamonds.jpg" alt="">
                 <p class="absolute bottom-10 left-8 text-white text-xl  font-semibold">Diamond Collection <br> <span
                         class="text-sm">Use Promo Code: Jewel</span></p>
             </div>
             <div class="relative">
-                <div>
-                    <img class="w-96 md:w-[700px]" src="./assets/gold.jpg" alt="">
-                </div>
+                <img class="w-96 md:w-[700px]" src="./assets/gold.jpg" alt="">
                 <p class="absolute bottom-10 left-8 text-white text-xl font-semibold">Gold Collection <br> <span
                         class="text-sm">Use Promo Code: Jewel</span></p>
             </div>
         </div>
         <!-- popoler section -->
-        <section class="w-11/12 mx-auto my-30">
+        <section class="w-10/12 mx-auto my-30">
             <div class="flex justify-center mb-16 flex-col space-y-3 text-center">
                 <h1 class="font-bold text-4xl">Populer Products</h1>
                 <p>Don't Miss the Populer Products</p>
@@ -133,69 +104,69 @@
             <div class="flex justify-between gap-8 space-y-5 flex-col md:flex-row">
                 <!-- card-1 -->
                 <div>
-                    <div id="card" class="relative">
-                        <div>
-                            <img class="w-96 h-96 lg:w-[450px] lg:h-[500px] object-cover" src="./assets/pic1.jpg"
-                                alt="">
-                        </div>
-                        <div class="flex gap-5 justify-center absolute bottom-70 left-30 cart">
-                            <div class="p-3 flex justify-center items-center bg-gray-300"><i
-                                    class="fa-regular fa-heart"></i></div>
-                            <div class="p-3 flex justify-center items-center bg-gray-300">Add to Cart</div>
-                            <div class="p-3 flex justify-center items-center bg-gray-300"><i
-                                    class="fa-regular fa-eye"></i></div>
+                    <div id="card" class="relative w-full h-auto">
+                        <img class="w-96 h-96 object-cover" src="./assets/pic1.jpg" alt="">
+                        <div
+                            class="flex gap-3 justify-center absolute bottom-[50%] left-[22%] md:left-[11%] lg:left-[23%] cart">
+                            <button class=" p-2 cursor-pointer  flex justify-center items-center bg-gray-300"><i
+                                    class="fa-regular fa-heart"></i></button>
+                            <button
+                                class=" p-2 md:p-1 lg:p-2 cursor-pointer  flex justify-center items-center bg-gray-300">Add
+                                to Cart</button>
+                            <button class=" p-2  cursor-pointer flex justify-center items-center bg-gray-300"><i
+                                    class="fa-regular fa-eye"></i></button>
                         </div>
                         <div class="text-center my-5">
-                            <h3 class="text-3xl font-semibold">Simple Bracelet</h3>
+                            <h3 class="text-2xl font-semibold">Simple Bracelet</h3>
                             <p class="text-orange-500 text-[18px]">$ 220.00</p>
                         </div>
                     </div>
                 </div>
                 <!-- card-2 -->
                 <div>
-                    <div id="card" class="relative">
-                        <div>
-                            <img class="w-96 h-96 lg:w-[450px] lg:h-[500px] object-cover" src="./assets/pic2.jpeg"
-                                alt="">
+                    <div id="card" class="relative w-full h-auto">
+                        <img class="w-96 h-96 object-cover" src="./assets/pic2.jpeg" alt="">
+                        <div
+                            class="flex gap-3 justify-center absolute bottom-[50%] left-[22%] md:left-[11%] lg:left-[23%] cart">
+                            <button class=" p-2 cursor-pointer  flex justify-center items-center bg-gray-300"><i
+                                    class="fa-regular fa-heart"></i></button>
+                            <button
+                                class=" p-2 md:p-1 lg:p-2 cursor-pointer  flex justify-center items-center bg-gray-300">Add
+                                to Cart</button>
+                            <button class=" p-2  cursor-pointer flex justify-center items-center bg-gray-300"><i
+                                    class="fa-regular fa-eye"></i></button>
                         </div>
-                        <div class="flex gap-5 justify-center absolute bottom-55 left-30 cart">
-                            <div class="p-3 flex justify-center items-center bg-gray-300"><i
-                                    class="fa-regular fa-heart"></i></div>
-                            <div class="p-3 flex justify-center items-center bg-gray-300">Add to Cart</div>
-                            <div class="p-3 flex justify-center items-center bg-gray-300"><i
-                                    class="fa-regular fa-eye"></i></div>
+                        <div class="text-center my-5">
+                            <h3 class="text-2xl font-semibold">Simple Bracelet</h3>
+                            <p class="text-orange-500 text-[18px]">$ 220.00</p>
                         </div>
-                    </div>
-                    <div class="text-center my-5">
-                        <h3 class="text-3xl font-semibold">Diamonds Necklace</h3>
-                        <p class="text-orange-500 text-[18px]">$ 520.00</p>
                     </div>
                 </div>
                 <!-- card-3 -->
                 <div>
-                    <div id="card" class="relative">
-                        <div>
-                            <img class="w-96 h-96 lg:w-[450px] lg:h-[500px] object-cover" src="./assets/pic3.jpeg"
-                                alt="">
+                    <div id="card" class="relative w-full h-auto">
+                        <img class="w-96 h-96 object-cover" src="./assets/pic3.jpeg" alt="">
+                        <div
+                            class="flex gap-3 justify-center absolute bottom-[50%] left-[22%] md:left-[11%] lg:left-[23%] cart">
+                            <button class=" p-2 cursor-pointer  flex justify-center items-center bg-gray-300"><i
+                                    class="fa-regular fa-heart"></i></button>
+                            <button
+                                class=" p-2 md:p-1 lg:p-2 cursor-pointer  flex justify-center items-center bg-gray-300">Add
+                                to Cart</button>
+                            <button class=" p-2  cursor-pointer flex justify-center items-center bg-gray-300"><i
+                                    class="fa-regular fa-eye"></i></button>
                         </div>
-                        <div class="flex gap-5 justify-center absolute bottom-55 left-30 cart">
-                            <div class="p-3 flex justify-center items-center bg-gray-300"><i
-                                    class="fa-regular fa-heart"></i></div>
-                            <div class="p-3 flex justify-center items-center bg-gray-300">Add to Cart</div>
-                            <div class="p-3 flex justify-center items-center bg-gray-300"><i
-                                    class="fa-regular fa-eye"></i></div>
+                        <div class="text-center my-5">
+                            <h3 class="text-2xl font-semibold">Simple Bracelet</h3>
+                            <p class="text-orange-500 text-[18px]">$ 220.00</p>
                         </div>
-                    </div>
-                    <div class="text-center my-5">
-                        <h3 class="text-3xl font-semibold">Plated Crystal Earrings</h3>
-                        <p class="text-orange-500 text-[18px]">$ 320.00</p>
                     </div>
                 </div>
 
             </div>
         </section>
         <!-- Hot deals section -->
-        <section class="w-11/12 mx-auto my-30">
+        <section class="w-10/12 mx-auto my-30">
             <div class="flex justify-center mb-16 flex-col space-y-3 text-center">
                 <h1 class="font-bold text-4xl">Hot Deals</h1>
                 <p>Don't Miss Today's Featured Deals</p>
@@ -203,133 +174,134 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-between gap-8 space-y-5 ">
                 <!-- card-1 -->
                 <div>
-                    <div id="card" class="relative">
-                        <div>
-                            <img class="w-96 h-96 lg:w-[450px] lg:h-[500px] object-cover" src="./assets/pic5.jpeg"
-                                alt="">
-                        </div>
-                        <div class="flex gap-5 justify-center absolute bottom-70 left-30 cart">
-                            <div class="p-3 flex justify-center items-center bg-gray-300"><i
-                                    class="fa-regular fa-heart"></i></div>
-                            <div class="p-3 flex justify-center items-center bg-gray-300">Add to Cart</div>
-                            <div class="p-3 flex justify-center items-center bg-gray-300"><i
-                                    class="fa-regular fa-eye"></i></div>
+                    <div id="card" class="relative w-full h-auto">
+                        <img class="w-96 h-96 object-cover" src="./assets/pic5.jpeg" alt="">
+                        <div
+                            class="flex gap-3 justify-center absolute bottom-[50%] left-[22%] md:left-[11%] lg:left-[23%] cart">
+                            <button class=" p-2 cursor-pointer  flex justify-center items-center bg-gray-300"><i
+                                    class="fa-regular fa-heart"></i></button>
+                            <button
+                                class=" p-2 md:p-1 lg:p-2 cursor-pointer  flex justify-center items-center bg-gray-300">Add
+                                to Cart</button>
+                            <button class=" p-2  cursor-pointer flex justify-center items-center bg-gray-300"><i
+                                    class="fa-regular fa-eye"></i></button>
                         </div>
                         <div class="text-center my-5">
-                            <h3 class="text-3xl font-semibold">Gold Bangles</h3>
+                            <h3 class="text-2xl font-semibold">Gold Bangles</h3>
                             <p class="text-orange-500 text-[18px]">$ 220.00</p>
                         </div>
                     </div>
                 </div>
                 <!-- card-2 -->
                 <div>
-                    <div id="card" class="relative">
-                        <div>
-                            <img class="w-96 h-96 lg:w-[450px] lg:h-[500px] object-cover" src="./assets/platinum.jpg"
-                                alt="">
+                    <div id="card" class="relative w-full h-auto">
+                        <img class="w-96 h-96 object-cover" src="./assets/platinum.jpg" alt="">
+                        <div
+                            class="flex gap-3 justify-center absolute bottom-[50%] left-[22%] md:left-[11%] lg:left-[23%] cart">
+                            <button class=" p-2 cursor-pointer  flex justify-center items-center bg-gray-300"><i
+                                    class="fa-regular fa-heart"></i></button>
+                            <button
+                                class=" p-2 md:p-1 lg:p-2 cursor-pointer  flex justify-center items-center bg-gray-300">Add
+                                to Cart</button>
+                            <button class=" p-2  cursor-pointer flex justify-center items-center bg-gray-300"><i
+                                    class="fa-regular fa-eye"></i></button>
                         </div>
-                        <div class="flex gap-5 justify-center absolute bottom-55 left-30 cart">
-                            <div class="p-3 flex justify-center items-center bg-gray-300"><i
-                                    class="fa-regular fa-heart"></i></div>
-                            <div class="p-3 flex justify-center items-center bg-gray-300">Add to Cart</div>
-                            <div class="p-3 flex justify-center items-center bg-gray-300"><i
-                                    class="fa-regular fa-eye"></i></div>
+                        <div class="text-center my-5">
+                            <h3 class="text-2xl font-semibold">Platinumn Bracelet</h3>
+                            <p class="text-orange-500 text-[18px]">$ 220.00</p>
                         </div>
-                    </div>
-                    <div class="text-center my-5">
-                        <h3 class="text-3xl font-semibold">Platinumn Bracelet</h3>
-                        <p class="text-orange-500 text-[18px]">$ 520.00</p>
                     </div>
                 </div>
                 <!-- card-3 -->
                 <div>
-                    <div id="card" class="relative">
-                        <div>
-                            <img class="w-96 h-96 lg:w-[450px] lg:h-[500px] object-cover" src="./assets/diamonds.jpg"
-                                alt="">
+                    <div id="card" class="relative w-full h-auto">
+                        <img class="w-96 h-96 object-cover" src="./assets/diamonds.jpg" alt="">
+                        <div
+                            class="flex gap-3 justify-center absolute bottom-[50%] left-[22%] md:left-[11%] lg:left-[23%] cart">
+                            <button class=" p-2 cursor-pointer  flex justify-center items-center bg-gray-300"><i
+                                    class="fa-regular fa-heart"></i></button>
+                            <button
+                                class=" p-2 md:p-1 lg:p-2 cursor-pointer  flex justify-center items-center bg-gray-300">Add
+                                to Cart</button>
+                            <button class=" p-2  cursor-pointer flex justify-center items-center bg-gray-300"><i
+                                    class="fa-regular fa-eye"></i></button>
                         </div>
-                        <div class="flex gap-5 justify-center absolute bottom-55 left-30 cart">
-                            <div class="p-3 flex justify-center items-center bg-gray-300"><i
-                                    class="fa-regular fa-heart"></i></div>
-                            <div class="p-3 flex justify-center items-center bg-gray-300">Add to Cart</div>
-                            <div class="p-3 flex justify-center items-center bg-gray-300"><i
-                                    class="fa-regular fa-eye"></i></div>
+                        <div class="text-center my-5">
+                            <h3 class="text-2xl font-semibold">Diamonds Necklace</h3>
+                            <p class="text-orange-500 text-[18px]">$ 220.00</p>
                         </div>
-                    </div>
-                    <div class="text-center my-5">
-                        <h3 class="text-3xl font-semibold">Diamonds Necklace </h3>
-                        <p class="text-orange-500 text-[18px]">$ 320.00</p>
                     </div>
                 </div>
                 <!-- card-4 -->
                 <div>
-                    <div id="card" class="relative">
-                        <div>
-                            <img class="w-96 h-96 lg:w-[450px] lg:h-[500px] object-cover" src="./assets/pic1.jpg"
-                                alt="">
-                        </div>
-                        <div class="flex gap-5 justify-center absolute bottom-70 left-30 cart">
-                            <div class="p-3 flex justify-center items-center bg-gray-300"><i
-                                    class="fa-regular fa-heart"></i></div>
-                            <div class="p-3 flex justify-center items-center bg-gray-300">Add to Cart</div>
-                            <div class="p-3 flex justify-center items-center bg-gray-300"><i
-                                    class="fa-regular fa-eye"></i></div>
+                    <div id="card" class="relative w-full h-auto">
+                        <img class="w-96 h-96 object-cover" src="./assets/pic1.jpg" alt="">
+                        <div
+                            class="flex gap-3 justify-center absolute bottom-[50%] left-[22%] md:left-[11%] lg:left-[23%] cart">
+                            <button class=" p-2 cursor-pointer  flex justify-center items-center bg-gray-300"><i
+                                    class="fa-regular fa-heart"></i></button>
+                            <button
+                                class=" p-2 md:p-1 lg:p-2 cursor-pointer  flex justify-center items-center bg-gray-300">Add
+                                to Cart</button>
+                            <button class=" p-2  cursor-pointer flex justify-center items-center bg-gray-300"><i
+                                    class="fa-regular fa-eye"></i></button>
                         </div>
                         <div class="text-center my-5">
-                            <h3 class="text-3xl font-semibold">Simple Bracelet</h3>
+                            <h3 class="text-2xl font-semibold">Simple Bracelet</h3>
                             <p class="text-orange-500 text-[18px]">$ 220.00</p>
                         </div>
                     </div>
                 </div>
                 <!-- card-5 -->
                 <div>
-                    <div id="card" class="relative">
-                        <div>
-                            <img class="w-96 h-96 lg:w-[450px] lg:h-[500px] object-cover" src="./assets/pic2.jpeg"
-                                alt="">
+                    <div id="card" class="relative w-full h-auto">
+                        <img class="w-96 h-96 object-cover" src="./assets/pic2.jpeg" alt="">
+                        <div
+                            class="flex gap-3 justify-center absolute bottom-[50%] left-[22%] md:left-[11%] lg:left-[23%] cart">
+                            <button class=" p-2 cursor-pointer  flex justify-center items-center bg-gray-300"><i
+                                    class="fa-regular fa-heart"></i></button>
+                            <button
+                                class=" p-2 md:p-1 lg:p-2 cursor-pointer  flex justify-center items-center bg-gray-300">Add
+                                to Cart</button>
+                            <button class=" p-2  cursor-pointer flex justify-center items-center bg-gray-300"><i
+                                    class="fa-regular fa-eye"></i></button>
                         </div>
-                        <div class="flex gap-5 justify-center absolute bottom-55 left-30 cart">
-                            <div class="p-3 flex justify-center items-center bg-gray-300"><i
-                                    class="fa-regular fa-heart"></i></div>
-                            <div class="p-3 flex justify-center items-center bg-gray-300">Add to Cart</div>
-                            <div class="p-3 flex justify-center items-center bg-gray-300"><i
-                                    class="fa-regular fa-eye"></i></div>
+                        <div class="text-center my-5">
+                            <h3 class="text-2xl font-semibold">Diamonds Necklace</h3>
+                            <p class="text-orange-500 text-[18px]">$ 220.00</p>
                         </div>
-                    </div>
-                    <div class="text-center my-5">
-                        <h3 class="text-3xl font-semibold">Diamonds Necklace</h3>
-                        <p class="text-orange-500 text-[18px]">$ 520.00</p>
                     </div>
                 </div>
                 <!-- card-6 -->
                 <div>
-                    <div id="card" class="relative">
-                        <div>
-                            <img class="w-96 h-96 lg:w-[450px] lg:h-[500px] object-cover" src="./assets/pic3.jpeg"
-                                alt="">
+                    <div id="card" class="relative w-full h-auto">
+                        <img class="w-96 h-96 object-cover" src="./assets/pic4.jpeg" alt="">
+                        <div
+                            class="flex gap-3 justify-center absolute bottom-[50%] left-[22%] md:left-[11%] lg:left-[23%] cart">
+                            <button class=" p-2 cursor-pointer  flex justify-center items-center bg-gray-300"><i
+                                    class="fa-regular fa-heart"></i></button>
+                            <button
+                                class=" p-2 md:p-1 lg:p-2 cursor-pointer  flex justify-center items-center bg-gray-300">Add
+                                to Cart</button>
+                            <button class=" p-2  cursor-pointer flex justify-center items-center bg-gray-300"><i
+                                    class="fa-regular fa-eye"></i></button>
                         </div>
-                        <div class="flex gap-5 justify-center absolute bottom-55 left-30 cart">
-                            <div class="p-3 flex justify-center items-center bg-gray-300"><i
-                                    class="fa-regular fa-heart"></i></div>
-                            <div class="p-3 flex justify-center items-center bg-gray-300">Add to Cart</div>
-                            <div class="p-3 flex justify-center items-center bg-gray-300"><i
-                                    class="fa-regular fa-eye"></i></div>
+                        <div class="text-center my-5">
+                            <h3 class="text-2xl font-semibold">Plated Crystal Earrings</h3>
+                            <p class="text-orange-500 text-[18px]">$ 220.00</p>
                         </div>
-                    </div>
-                    <div class="text-center my-5">
-                        <h3 class="text-3xl font-semibold">Plated Crystal Earrings</h3>
-                        <p class="text-orange-500 text-[18px]">$ 320.00</p>
                     </div>
                 </div>
 
             </div>
         </section>
+        <!-- shop now section -->
         <section class="my-20">
             <div class="hero min-h-[450px]" style="background-image: url(./assets/banner-----.jpg);">
                 <div class="hero-overlay"></div>
                 <div class="hero-content text-neutral-content text-center">
                     <div class="">
-                        <h1 class="mb-5 text-5xl font-bold">Diamonds and Gemstones</h1>
+                        <h1 class="mb-5 text-3xl md:text-4xl lg:text-5xl font-bold">Diamonds and Gemstones</h1>
                         <p class="mb-5 text-center">
                             Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
                             <br>
@@ -340,7 +312,8 @@
                 </div>
             </div>
         </section>
-        <section class="mt-30 mb-20 w-11/12 mx-auto">
+        <!-- Earring Collectio -->
+        <section class="mt-30 mb-20 w-10/12 mx-auto">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-5">
                 <div class="py-2">
                     <div class="my-5">
@@ -349,53 +322,49 @@
                             accusamus quae rerum saepe architecto nostrum nihil deserunt magnam necessitatibus explicabo
                             eos quos nemo ullam ex iste expedita natus.</p>
                     </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 space-y-5 mx-auto">
-                        <div id="card" class="relative">
-                            <div>
-                                <img class="w-full md:w-80 h-40 object-cover" src="./assets/pic3.jpeg" alt="">
-                            </div>
-                            <div class="flex gap-5 justify-center absolute bottom-8 left-4 cart">
-                                <div class="p-1 flex justify-center items-center bg-gray-300"><i
-                                        class="fa-regular fa-heart"></i></div>
-                                <div class="p-1 flex justify-center items-center bg-gray-300">Add to Cart</div>
-                                <div class="p-1 flex justify-center items-center bg-gray-300"><i
-                                        class="fa-regular fa-eye"></i></div>
-                            </div>
-                        </div>
-                        <div id="card" class="relative">
-                            <div>
-                                <img class="w-full md:w-80 h-40 object-cover" src="./assets/pic3.jpeg" alt="">
-                            </div>
-                            <div class="flex gap-5 justify-center absolute bottom-8 left-4 cart">
-                                <div class="p-1 flex justify-center items-center bg-gray-300"><i
-                                        class="fa-regular fa-heart"></i></div>
-                                <div class="p-1 flex justify-center items-center bg-gray-300">Add to Cart</div>
-                                <div class="p-1 flex justify-center items-center bg-gray-300"><i
-                                        class="fa-regular fa-eye"></i></div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5 space-y-5 mx-auto">
+                        <div id="card" class="relative w-full lg:w-70 h-40">
+                            <img class="w-full lg:w-70 h-40 object-cover" src="./assets/pic3.jpeg" alt="">
+                            <div class="flex gap-5 justify-center absolute bottom-14 left-18 lg:left-10 cart">
+                                <button class="p-1 cursor-pointer flex justify-center items-center bg-gray-300"><i
+                                        class="fa-regular fa-heart"></i></button>
+                                <button class="p-1 cursor-pointer flex justify-center items-center bg-gray-300">Add to
+                                    Cart</button>
+                                <button class="p-1 cursor-pointer1 flex justify-center items-center bg-gray-300"><i
+                                        class="fa-regular fa-eye"></i></button>
                             </div>
                         </div>
-                        <div id="card" class="relative">
-                            <div>
-                                <img class="w-full md:w-80 h-40 object-cover" src="./assets/pic3.jpeg" alt="">
-                            </div>
-                            <div class="flex gap-5 justify-center absolute bottom-8 left-4 cart">
-                                <div class="p-1 flex justify-center items-center bg-gray-300"><i
-                                        class="fa-regular fa-heart"></i></div>
-                                <div class="p-1 flex justify-center items-center bg-gray-300">Add to Cart</div>
-                                <div class="p-1 flex justify-center items-center bg-gray-300"><i
-                                        class="fa-regular fa-eye"></i></div>
+                        <div id="card" class="relative w-full lg:w-70 h-40">
+                            <img class="w-full lg:w-70 h-40 object-cover" src="./assets/pic4.jpeg" alt="">
+                            <div class="flex gap-5 justify-center absolute bottom-14 left-18 lg:left-10 cart">
+                                <button class="p-1 cursor-pointer flex justify-center items-center bg-gray-300"><i
+                                        class="fa-regular fa-heart"></i></button>
+                                <button class="p-1 cursor-pointer flex justify-center items-center bg-gray-300">Add to
+                                    Cart</button>
+                                <button class="p-1 cursor-pointer1 flex justify-center items-center bg-gray-300"><i
+                                        class="fa-regular fa-eye"></i></button>
                             </div>
                         </div>
-                        <div id="card" class="relative">
-                            <div>
-                                <img class="w-full md:w-80 h-40 object-cover" src="./assets/pic3.jpeg" alt="">
+                        <div id="card" class="relative w-full lg:w-70 h-40">
+                            <img class="w-full lg:w-70 h-40 object-cover" src="./assets/pic4.jpeg" alt="">
+                            <div class="flex gap-5 justify-center absolute bottom-14 left-18 lg:left-10 cart">
+                                <button class="p-1 cursor-pointer flex justify-center items-center bg-gray-300"><i
+                                        class="fa-regular fa-heart"></i></button>
+                                <button class="p-1 cursor-pointer flex justify-center items-center bg-gray-300">Add to
+                                    Cart</button>
+                                <button class="p-1 cursor-pointer1 flex justify-center items-center bg-gray-300"><i
+                                        class="fa-regular fa-eye"></i></button>
                             </div>
-                            <div class="flex gap-5 justify-center absolute bottom-8 left-4 cart">
-                                <div class="p-1 flex justify-center items-center bg-gray-300"><i
-                                        class="fa-regular fa-heart"></i></div>
-                                <div class="p-1 flex justify-center items-center bg-gray-300">Add to Cart</div>
-                                <div class="p-1 flex justify-center items-center bg-gray-300"><i
-                                        class="fa-regular fa-eye"></i></div>
+                        </div>
+                        <div id="card" class="relative w-full lg:w-70 h-40">
+                            <img class="w-full lg:w-70 h-40 object-cover" src="./assets/pic3.jpeg" alt="">
+                            <div class="flex gap-5 justify-center absolute bottom-14 left-18 lg:left-10 cart">
+                                <button class="p-1 cursor-pointer flex justify-center items-center bg-gray-300"><i
+                                        class="fa-regular fa-heart"></i></button>
+                                <button class="p-1 cursor-pointer flex justify-center items-center bg-gray-300">Add to
+                                    Cart</button>
+                                <button class="p-1 cursor-pointer1 flex justify-center items-center bg-gray-300"><i
+                                        class="fa-regular fa-eye"></i></button>
                             </div>
                         </div>
                     </div>
@@ -406,53 +375,278 @@
             </div>
         </section>
         <!-- testimonials section -->
-        <section class="w-11/12 mx-auto my-30">
-            <div class="flex justify-center items-center space-y-5 flex-col text-center">
-                <h1 class="text-3xl font-bold">Testimonial</h1>
-                <p class="mb-5">See What Our Clints Saying</p>
-                <div class="flex gap-2 rating">
-                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" aria-label="1 star" />
-                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" aria-label="1 star" />
-                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" aria-label="1 star" />
-                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" aria-label="1 star" />
-                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" aria-label="2 star"
-                        checked="checked" />
-                </div>
-                <div>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic eveniet minima a ratione quas <br>
-                    reiciendis fugiat alias soluta numquam iure placeat, ex eius deleniti nesciunt expedita adipisci? <br>
-                    Aliquam, reiciendis maxime!
-                </div>
-                <div class="flex items-center gap-3">
-                    <div className="avatar">
-                        <div className="w-16 rounded-full">
-                            <img class="rounded-full w-16" src="https://img.daisyui.com/images/profile/demo/yellingcat@192.webp" />
+        <section class="w-10/12 mx-auto my-30">
+            <div class="flex justify-center">
+                <div class="carousel rounded-box w-96">
+                    <div class="carousel-item w-full ">
+                        <div class="flex justify-center items-center space-y-5 flex-col text-center">
+                            <h1 class="text-3xl font-bold">Testimonial</h1>
+                            <p class="mb-5">See What Our Clints Saying</p>
+                            <div class="flex gap-2 rating">
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400"
+                                    aria-label="1 star" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400"
+                                    aria-label="1 star" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400"
+                                    aria-label="1 star" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400"
+                                    aria-label="1 star" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400"
+                                    aria-label="2 star" checked="checked" />
+                            </div>
+                            <div>
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic eveniet minima a ratione
+                                quas <br>
+                                reiciendis fugiat alias soluta numquam iure placeat, ex eius deleniti nesciunt expedita
+                                adipisci?
+                                <br>
+                                Aliquam, reiciendis maxime!
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div className="avatar">
+                                    <div className="w-16 rounded-full">
+                                        <img class="rounded-full w-16"
+                                            src="https://img.daisyui.com/images/profile/demo/yellingcat@192.webp" />
+                                    </div>
+                                </div>
+                                <h6 class="text-xl font-semibold">Mofis Mia</h6>
+                            </div>
                         </div>
                     </div>
-                    <h6 class="text-xl font-semibold">Mofis Mia</h6>
+                    <div class="carousel-item w-full ">
+                        <div class="flex justify-center items-center space-y-5 flex-col text-center">
+                            <h1 class="text-3xl font-bold">Testimonial</h1>
+                            <p class="mb-5">See What Our Clints Saying</p>
+                            <div class="flex gap-2 rating">
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400"
+                                    aria-label="1 star" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400"
+                                    aria-label="1 star" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400"
+                                    aria-label="1 star" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400"
+                                    aria-label="1 star" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400"
+                                    aria-label="2 star" checked="checked" />
+                            </div>
+                            <div>
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic eveniet minima a ratione
+                                quas <br>
+                                reiciendis fugiat alias soluta numquam iure placeat, ex eius deleniti nesciunt expedita
+                                adipisci?
+                                <br>
+                                Aliquam, reiciendis maxime!
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div className="avatar">
+                                    <div className="w-16 rounded-full">
+                                        <img class="rounded-full w-16"
+                                            src="https://img.daisyui.com/images/profile/demo/yellingcat@192.webp" />
+                                    </div>
+                                </div>
+                                <h6 class="text-xl font-semibold">Mofis Mia</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item w-full ">
+                        <div class="flex justify-center items-center space-y-5 flex-col text-center">
+                            <h1 class="text-3xl font-bold">Testimonial</h1>
+                            <p class="mb-5">See What Our Clints Saying</p>
+                            <div class="flex gap-2 rating">
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400"
+                                    aria-label="1 star" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400"
+                                    aria-label="1 star" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400"
+                                    aria-label="1 star" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400"
+                                    aria-label="1 star" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400"
+                                    aria-label="2 star" checked="checked" />
+                            </div>
+                            <div>
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic eveniet minima a ratione
+                                quas <br>
+                                reiciendis fugiat alias soluta numquam iure placeat, ex eius deleniti nesciunt expedita
+                                adipisci?
+                                <br>
+                                Aliquam, reiciendis maxime!
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div className="avatar">
+                                    <div className="w-16 rounded-full">
+                                        <img class="rounded-full w-16"
+                                            src="https://img.daisyui.com/images/profile/demo/yellingcat@192.webp" />
+                                    </div>
+                                </div>
+                                <h6 class="text-xl font-semibold">Mofis Mia</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item w-full ">
+                        <div class="flex justify-center items-center space-y-5 flex-col text-center">
+                            <h1 class="text-3xl font-bold">Testimonial</h1>
+                            <p class="mb-5">See What Our Clints Saying</p>
+                            <div class="flex gap-2 rating">
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400"
+                                    aria-label="1 star" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400"
+                                    aria-label="1 star" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400"
+                                    aria-label="1 star" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400"
+                                    aria-label="1 star" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400"
+                                    aria-label="2 star" checked="checked" />
+                            </div>
+                            <div>
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic eveniet minima a ratione
+                                quas <br>
+                                reiciendis fugiat alias soluta numquam iure placeat, ex eius deleniti nesciunt expedita
+                                adipisci?
+                                <br>
+                                Aliquam, reiciendis maxime!
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div className="avatar">
+                                    <div className="w-16 rounded-full">
+                                        <img class="rounded-full w-16"
+                                            src="https://img.daisyui.com/images/profile/demo/yellingcat@192.webp" />
+                                    </div>
+                                </div>
+                                <h6 class="text-xl font-semibold">Mofis Mia</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <section class="my-20">
+                <div class="hero min-h-[450px]" style="background-image: url(./assets/banner-----.jpg);">
+                    <div class="hero-overlay"></div>
+                    <div class="hero-content text-neutral-content text-center">
+                        <div class="flex flex-col lg:flex-row justify-between gap-20 items-center">
+                            <h1 class="mb-5 text-4xl font-bold text-center lg:text-start">SIGN UP FOR NEWS & <br> GET
+                                20% OFF</h1>
+                            <div class="join">
+                                <div>
+                                    <label class="input validator join-item">
+                                        <input class="w-60" type="email" placeholder="Enter Your email" required />
+                                    </label>
+                                    <div class="validator-hint hidden">Enter valid email address</div>
+                                </div>
+                                <button class="btn bg-gray-300 join-item">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <!-- blogs -->
+        <section class="w-10/12 mx-auto my-30">
+            <h1 class="text-3xl mb-3 font-bold text-center">Blogs</h1>
+            <p class="mb-8 text-center">Read About Jewellery Industry</p>
+            <div class=" grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="card p-6 space-y-3 shadow-sm">
+                    <div class="relative">
+                        <figure>
+                            <img class="w-96 h-96" src="./assets/ring.jpg" alt="Shoes" />
+                        </figure>
+                        <div class="absolute bg-gray-300 py-2 px-4 bottom-63 left-10">
+                            <p>14 <br> April</p>
+                        </div>
+                    </div>
+                    <div class="space-y-3">
+                        <h2 class="card-title font-bold text-2xl">The best wedding jwellery for the women</h2>
+                        <p>A card component has a figure, a body part, and inside body there are title and actions parts
+                        </p>
+                        <div class="card-actions justify-start">
+                            <button class="btn btn-outline px-4 bg-gray-300">Read More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card p-6 space-y-3 shadow-sm">
+                    <div class="relative">
+                        <figure>
+                            <img class="w-96 h-96" src="./assets/pic5.jpeg" alt="Shoes" />
+                        </figure>
+                        <div class="absolute bg-gray-300 py-2 px-4 bottom-63 left-10">
+                            <p>14 <br> April</p>
+                        </div>
+                    </div>
+                    <div class="space-y-3">
+                        <h2 class="card-title font-bold text-2xl">The best wedding jwellery for the women</h2>
+                        <p>A card component has a figure, a body part, and inside body there are title and actions parts
+                        </p>
+                        <div class="card-actions justify-start">
+                            <button class="btn btn-outline px-4 bg-gray-300">Read More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card p-6 space-y-3 shadow-sm">
+                    <div class="relative">
+                        <figure>
+                            <img class="w-96 h-96" src="./assets/pic3.jpeg" alt="Shoes" />
+                        </figure>
+                        <div class="absolute bg-gray-300 py-2 px-4 bottom-63 left-10">
+                            <p>14 <br> April</p>
+                        </div>
+                    </div>
+                    <div class="space-y-3">
+                        <h2 class="card-title font-bold text-2xl">The best wedding jwellery for the women</h2>
+                        <p>A card component has a figure, a body part, and inside body there are title and actions parts
+                        </p>
+                        <div class="card-actions justify-start">
+                            <button class="btn btn-outline px-4 bg-gray-300">Read More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- instagram -->
+        <section class="mt-30">
+            <h1 class="text-3xl mb-3 font-bold text-center">Instagram</h1>
+            <p class="mb-8 text-center">Follow Us On Social Media</p>
+            <div class="carousel rounded-box">
+                <div class="carousel-item">
+                    <img class="w-60 h-80" src="./assets/pic4.jpeg" alt="Burger" />
+                </div>
+                <div class="carousel-item">
+                    <img class="w-60 h-80" src="./assets/gold.jpg" alt="Burger" />
+                </div>
+                <div class="carousel-item">
+                    <img class="w-60 h-80" src="./assets/pic1.jpg" alt="Burger" />
+                </div>
+                <div class="carousel-item">
+                    <img class="w-60 h-80" src="./assets/pic3.jpeg" alt="Burger" />
+                </div>
+                <div class="carousel-item">
+                    <img class="w-60 h-80" src="./assets/pic2.jpeg" alt="Burger" />
+                </div>
+                <div class="carousel-item">
+                    <img class="w-60 h-80" src="./assets/gold.jpg" alt="Burger" />
+                </div>
+                <div class="carousel-item">
+                    <img class="w-60 h-80" src="./assets/pic5.jpeg" alt="Burger" />
                 </div>
             </div>
         </section>
     </Main>
     <footer>
-        <footer class="px-4 divide-y bg-gray-300 dark:bg-gray-100 dark:text-gray-800">
+        <footer class="px-4 p-8 divide-y bg-[#f3efec] dark:bg-gray-100 dark:text-gray-800">
             <div class="w-11/12 flex flex-col justify-between py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
                 <div class="lg:w-1/3">
                     <a rel="noopener noreferrer" href="#" class="flex justify-center space-x-3 lg:justify-start">
-                        <div class="flex items-center justify-center w-12 h-12 rounded-full dark:bg-violet-600">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor"
-                                class="flex-shrink-0 w-5 h-5 rounded-full dark:text-gray-50">
-                                <path
-                                    d="M18.266 26.068l7.839-7.854 4.469 4.479c1.859 1.859 1.859 4.875 0 6.734l-1.104 1.104c-1.859 1.865-4.875 1.865-6.734 0zM30.563 2.531l-1.109-1.104c-1.859-1.859-4.875-1.859-6.734 0l-6.719 6.734-6.734-6.734c-1.859-1.859-4.875-1.859-6.734 0l-1.104 1.104c-1.859 1.859-1.859 4.875 0 6.734l6.734 6.734-6.734 6.734c-1.859 1.859-1.859 4.875 0 6.734l1.104 1.104c1.859 1.859 4.875 1.859 6.734 0l21.307-21.307c1.859-1.859 1.859-4.875 0-6.734z">
-                                </path>
-                            </svg>
-                        </div>
-                        <span class="self-center text-2xl font-semibold">Jewellery Shop</span>
+                        <a href="#" class="flex items-center gap-2">
+                            <img src="./assets/logo.png" alt="Jewellery Logo" class="h-10 w-10 object-cover" />
+                            <h1 class="text-2xl md:text-3xl font-semibold">Jewelly</h1>
+                        </a>
                     </a>
                 </div>
                 <div class="grid grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-4">
                     <div class="space-y-3">
-                        <h3 class="tracking-wide uppercase dark:text-gray-900">Product</h3>
+                        <h3 class="tracking-wide uppercase font-bold dark:text-gray-900">Product</h3>
                         <ul class="space-y-1">
                             <li>
                                 <a rel="noopener noreferrer" href="#">Features</a>
@@ -469,7 +663,7 @@
                         </ul>
                     </div>
                     <div class="space-y-3">
-                        <h3 class="tracking-wide uppercase dark:text-gray-900">Company</h3>
+                        <h3 class="tracking-wide font-bold uppercase dark:text-gray-900">Company</h3>
                         <ul class="space-y-1">
                             <li>
                                 <a rel="noopener noreferrer" href="#">Privacy</a>
@@ -480,7 +674,7 @@
                         </ul>
                     </div>
                     <div class="space-y-3">
-                        <h3 class="uppercase dark:text-gray-900">Developers</h3>
+                        <h3 class="uppercase font-bold dark:text-gray-900">Developers</h3>
                         <ul class="space-y-1">
                             <li>
                                 <a rel="noopener noreferrer" href="#">Public API</a>
@@ -494,7 +688,7 @@
                         </ul>
                     </div>
                     <div class="space-y-3">
-                        <div class="uppercase dark:text-gray-900">Social media</div>
+                        <div class="uppercase font-bold dark:text-gray-900">Social media</div>
                         <div class="flex justify-start space-x-3">
                             <a rel="noopener noreferrer" href="#" title="Facebook" class="flex items-center p-1">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 32 32"
@@ -527,6 +721,15 @@
             <div class="py-6 text-sm text-center dark:text-gray-600">© Jewellery shop. All rights reserved.</div>
         </footer>
     </footer>
+    <!-- navbar js -->
+    <script>
+        const toggleBtn = document.getElementById("menu-toggle");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        toggleBtn.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+        });
+    </script>
 </body>
 
 </html>
